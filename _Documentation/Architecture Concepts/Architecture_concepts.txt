@@ -1,0 +1,2 @@
+Architecture Concepts are the main principles that laravel depend on.
+Architecture Concepts are the CORE of laravel.

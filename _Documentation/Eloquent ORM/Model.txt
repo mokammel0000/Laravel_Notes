@@ -1,0 +1,90 @@
+There is an unlegall relation between Model and Controller, 
+    -we create a specific controller for each route in the project(not all models).
+    -controller has the actions/ handllers that will be done in the Model
+        (index - show - store - update - destroy), 
+    -u can reuse the model and it's controller in other projects(SOC).
+
+Properties in the Model: 
+    protected $connection = 'sqlite'; 
+        if u want to connect to a table that is located in different DB that is not written in the .env file.
+    
+    protected $table = 'my_flights';
+        if u want to connect to a table that is not as convenient.
+        the convenient is that the model is as same as the migration name, but 
+            Migration is plural,
+            Model is single and the first char of the model is capital because it is a class.
+
+    protected $primaryKey = 'flight_id';
+    public $incrementing = false;
+    protected $keyType = 'string';
+
+    public $timestamps = false;
+    protected $dateFormat = 'U';
+    const CREATED_AT = 'creation_date';
+    const UPDATED_AT = 'updated_date';
+
+    protected $attributes = [
+        'options' => '[]',
+        'delayed' => false,
+    ];
+        if u want to write a default values to some attributes in the table, 
+        note that order the attributes by it's order in the DB.
+
+    protected $fillable = [
+        'name', 
+        'age', 
+        'phone' 
+    ];
+
+    protected $guarded = [];
+        to use Mass Assignment in you code, add $fillable array or $guarded array and add the fields 
+        that is will be added in the array that will be passed to ORM methods(create - update).
+
+    fillable or guarded must be added in the Model,these properties are required because
+    all Eloquent models are protected against mass assignment vulnerabilities by default.
+
+
+------------------------------------------------------------------------------------------------------------
+Artisan Commands: 
+    php artisan make:model Flight
+
+    ------------------------------------------------------------------------------
+    php artisan make:model Flight -m
+    php artisan make:model Flight --migration
+        Generate a model and a [migration] class...
+
+    ------------------------------------------------------------------------------
+    php artisan make:model Flight -f
+    php artisan make:model Flight --factory
+        Generate a model and a [FlightFactory] class...
+    ------------------------------------------------------------------------------    
+    php artisan make:model Flight -s
+    php artisan make:model Flight --seed
+        Generate a model and a [FlightSeeder] class...
+        
+    ------------------------------------------------------------------------------
+    php artisan make:model Flight -c
+    php artisan make:model Flight --controller
+        Generate a model and a [FlightController] class...
+        
+    ------------------------------------------------------------------------------
+    php artisan make:model Flight -crR
+    php artisan make:model Flight --controller --resource --requests
+        Generate a model, [FlightController resource class], and [form request classes]...
+        
+    ------------------------------------------------------------------------------
+    php artisan make:model Flight --policy
+        Generate a model and a Flight [Policy] class...
+        
+    ------------------------------------------------------------------------------
+    php artisan make:model Flight -mfsc
+        Generate a model and a [migration], [factory], [seeder], and [controller]...
+        
+    ------------------------------------------------------------------------------
+    php artisan make:model Flight --all
+        Shortcut to generate a [model], [migration], [factory], [seeder], [policy], [controller], and [form requests]...
+        
+    ------------------------------------------------------------------------------
+    php artisan make:model Member --pivot
+        Generate a [pivot] model...
+------------------------------------------------------------------------------------------------------------

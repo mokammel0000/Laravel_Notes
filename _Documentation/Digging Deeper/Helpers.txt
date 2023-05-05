@@ -1,0 +1,24 @@
+Some Useful Functions...
+
+
+request(): 
+    obtains an input field's value from the current request,
+    it's alternative to [Request $request] parameter.
+    dd($_GET);                         //fetch only get fields from the form.
+    dd($_POST);                        //fetch only post fields from the form.
+    dd($request->all());               //fetch get and post fields from the form.
+
+    request();                         // the request object.
+    request()->all();                  // only the data that is send with the request.
+
+    request()->has('product_id');      // True or False(if the request has the selected field or not).
+    request()->product_id;             // fetch the selected field only.
+    
+    request()->getmethod();            // get, post, put or delete.
+    request()-hasfile('photo');        // True or False(if the request has the selected file or not).
+    request()->only('product_id');     // only fetch the selected field.
+    request()except->('_token');       // fetch all data except the _token.
+
+view():
+    use it to view a blade template.
+    return view('auth.login');

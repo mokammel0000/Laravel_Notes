@@ -1,0 +1,17 @@
+You can compact data to the view with sending a KEY, VALUE array: 
+    Route::get('/', function () {
+        return view('welcome', ['name' => 'Samantha']);
+    });
+
+    Hello, {{ $name }}.
+
+Also You can compactdata to the view using compact() function, to send variables dirctly:  
+    Route::get('/', function () {
+        $name = 'Mohamed';
+        return view('welcome', compact($name));
+    });
+
+    Hello, {{ $name }}.
+
+Also you can compact more than one variable using compact() function: 
+    return view('website.category', compact('products', 'category', 'start'));

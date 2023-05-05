@@ -1,0 +1,5 @@
+Carbon is the most popular package to deal with DATES, 
+    it's downloaded in laravel by default.
+
+Carbon methods can't be applied to any date, it can be applied only on a specific format.
+    Laravel make the TimeStamp dates in this format, so can use Carbon methods on them directly.

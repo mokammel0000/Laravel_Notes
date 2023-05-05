@@ -1,0 +1,10 @@
+Packegist is The PHP Package Repository, in other words [Php packages search engine], 
+    u can use it to search about any package in php, 
+    u can get the composer command for any php package to download it, 
+    u can know the most popular commands in this package
+        to know more informations about it, u can go to it's website.
+
+
+
+
+Note that, u can use it with native php project, not just Laravel projects

@@ -1,0 +1,18 @@
+Rich Text Editor, WYSIWYG(what you see is what you get), 
+    It's a pluggin to create a text areaa that can style words in it(format the paragraph).
+    It add html & css tags on the paragraph to store it in the desired format.
+
+The most ones: 
+    Minimal Rich Text Editor:
+        -is a jquery text editor that use traditional text area.
+        -easy to use, no need to write native javascript code or use one of it's frameworks.
+
+    Quill: 
+        -just adding simple features to the paragraph, 
+        -use it with the Egyption cleints....!!
+    
+    Tiny MCE:
+        -the most popular one todays, 
+        -wordpress pluggin, 
+        -can add a bunch or features that make it complex(Somewhat like Word)
+        -don't use it with traditional users(causes overhead for u).

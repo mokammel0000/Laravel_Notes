@@ -1,0 +1,3 @@
+Laravelsd.com: 
+    a website that help you to draw your Database scheme before write it's migrations, 
+    it can create migration file for you...

@@ -1,0 +1,11 @@
+Routes: Web & Dashboard & Api.
+               -don't forget to add prefix for the dashboard file in RouteServiceProvider File.
+
+Controllers: Website & Dashboard.
+
+Views: Website & Dashboard
+
+Model: u use the same Model in both Website and Dashboard.
+
+Migration: there is no need to seperate them into folders.
+

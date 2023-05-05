@@ -1,0 +1,2 @@
+PHP Coding Standards Fixer[PHP CS FIXER]:
+    A  tool fixes your code to follow standards to reach to the PSR(PHP coding standards).

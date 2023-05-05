@@ -1,0 +1,24 @@
+The easiest way to validate a request, is to validate the request data that is send, 
+    $request->validate([
+            'name'=>'required',
+            'phone'=>'required',
+            'photo'=>'required| mimes:jpg,bmp,png',
+            
+            'email'=>'required',
+            'password'=>'required|confirmed',
+    ]);
+    take care that the $request variable will hold the data that pass from validation process...
+    
+Write Validation Rules BEFORE any thig in the controller, 
+    to validate the sending data, before doing any action, 
+    if the sending data isn't right, redirect to the form with the error messeges.
+
+
+Validation Rules: 
+    if there are two or three: u can seperate them using PIPE LINE |
+    if there art more than three: put them in an [array], to make them easier in reading.
+
+
+In the UNIQUE attribute: 
+    if the name of the field as same as the name of the coloumn in the table in DB.
+    you don't have to write the coloumn name.

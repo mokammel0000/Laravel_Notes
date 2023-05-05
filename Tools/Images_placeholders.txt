@@ -1,0 +1,19 @@
+The following websites gives u a link to put in href="" attribute:
+
+placeholder.com: 
+    give u a gray photo that u can use as a dummy image. 
+    u can specify image size as u want.
+-------------------------------------------------------------
+placeimg.com: 
+    give u different images As desired, 
+    u can specify image size as u want.
+    like: nature, people, tech,.....    
+
+
+-------------------------------------------------------------
+picsum.photos: 
+    as same as the last one(placeimg.com).
+-------------------------------------------------------------
+
+
+or u can use [Faker Php]: this is a php package that give u a dummy data to try showing data in your website.

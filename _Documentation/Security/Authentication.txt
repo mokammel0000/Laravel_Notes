@@ -1,0 +1,21 @@
+صلاحياتك لدخول الموقع - هل الإيميل والباسوورد صح؟
+
+Auth::attempt($credentials);    
+    -take this email and password and check if there are authenticated to login or not.
+    -if they are authenticated, perform what is in if statement(like go to your profile).
+
+Auth::check();
+    -check if the user has logged in or not.
+
+Auth::user();
+    -fetch the object of the current logged user in this session.
+
+Auth::user()->name;     // can write any attribute in the user's table(email - phone - created_at - etc...)
+    -fetch the name of the current user.
+
+
+auth()->user()->id;    // can write any attribute in the user's table(email - phone - created_at - etc...)
+    -fetch the name of the current user(from the user object, fetch his name attribute).
+
+auth()->id();
+    -directly fetch the id of the current user.

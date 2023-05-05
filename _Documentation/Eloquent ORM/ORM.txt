@@ -1,0 +1,38 @@
+ORM:
+    DML for the DB in Laravel.
+    stands for: Object Relational Mapper.
+    a design pattern, each framework give it a special name, 
+        laravel named it: [Eloquent ORM].
+
+
+ORM applys MVC pattern, it deals with DB through MODEL.
+    Model is the object that u call to deal with the table from it.
+ORM is a DML that can Select/ Insert/ Update/ Delete/ data from DB.
+Instead of write mysql code, we can use ORM to manipulate with DB using traditional classes and methods.
+
+ORM is based on query builder...
+It's better to use ORM than use query builder if u want to make a complex relationships.
+
+use ORM in the simple queries,
+    if u want to write a complex queries(like joins & calculations on Columns),
+    ORM will be very complex and low performance way to deal with, 
+    then u can use Expressions in the query builder(It enables you to write MYSQL commands).
+
+
+Inserts
+    $flight = Flight::create(['name' => 'London to Paris']);
+    $flight->fill(['name' => 'Amsterdam to Frankfurt']);
+
+Updates
+
+Mass Assignment
+
+Upserts
+    you may need to update an existing model or create a new model if no matching model exists
+
+Deleteing/ Destroying
+
+Soft Deleting
+    In addition to actually removing records from your database, Eloquent can also "soft delete" models.
+    When models are soft deleted, they are not actually removed from your database. Instead,
+    a deleted_at attribute is set on the model indicating the date and time at which the model was "deleted".

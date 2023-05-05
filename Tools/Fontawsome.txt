@@ -1,0 +1,6 @@
+Fontawsome.com
+Fontawsome.com/v5/cheatsheet: 
+    Like bootstrap but it gives u ICONS.
+        
+    -u can download it's files, 
+    -also u can link your project with it online.

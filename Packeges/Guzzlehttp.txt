@@ -1,0 +1,14 @@
+Guzzlehttp is a PHP HTTP client library, (تبعت ريكويست على دومين موقع آخر، وتستقبل الناتج)
+    it give u the ability to use other websites apis,
+    u can give it the link, and the form method(get/ post), and the required data,
+    and it will response to u,
+    giving u: all informations about your response(status code, header line, response body-the real data-).
+
+
+eg. 
+    using a weather website, 
+    using a Currency exchange website, (موقع تحويل عملات).
+
+
+Note that: 
+    it return a json file for you, u can convert it to an assosiative array.

@@ -1,0 +1,174 @@
+Writing Php and Laravel in the html design...
+    eg.
+        href="{{ url('/login/') }}"
+        <p> {{ $user()->name }} is @php($age += 15) in the time is {{ time() }}</p>
+
+
+In blade Template: 
+    {{   }}
+        -showing the php code in them as it is, don't read html tags in it.
+        -scaping the html elements that's written in it.
+        -show the code in it as a text, don't convert it to html code...
+
+    {!! !!}
+        --showing the php code and convert and extract html tags from it.
+        -doesn't scape the html elements that's written in it.
+        -show the html code that exist in it
+        
+        By default, Blade {{ }} statements 
+        are automatically sent through PHP's htmlspecialchars function to prevent XSS attacks.
+        If you do not want your data to be escaped, you may use the following syntax:
+        Hello, {!! $name !!}.
+
+    {{-- --}}   ---> Comments.      
+
+
+-----------------------------------------------------------------------------------------------------
+Conditions: 
+    If Statements:
+        @if (count($records) === 1)
+            I have one record!
+        @elseif (count($records) > 1)
+            I have multiple records!
+        @else
+            I don't have any records!
+        @endif
+
+    Unless(): 
+        @unless (Auth::check())
+        You are not signed in.
+        @endunless
+
+    Switch Case: 
+        @switch($i)
+            @case(1)
+                First case...
+                @break
+
+            @case(2)
+                Second case...
+                @break
+
+            @default
+                Default case...
+        @endswitch
+
+
+-----------------------------------------------------------------------------------------------------
+Looping: 
+    For:
+        @for ($i = 0; $i < 10; $i++)
+            The current value is {{ $i }}
+        @endfor
+
+    Foreach:
+        @foreach ($users as $user)
+            <p>This is user {{ $user->id }}</p>
+        @endforeach
+
+    Forelse:
+        @forelse ($users as $user)
+            <li>{{ $user->name }}</li>
+        @empty
+            <p>No users</p>
+        @endforelse
+
+    While:
+        @while (true)
+            <p>I'm looping forever.</p>
+        @endwhile
+
+    The Loop Variables:
+        $loop->index	       | The index of the current loop iteration (starts at 0).
+        $loop->iteration	   | The current loop iteration (starts at 1).
+        $loop->remaining	   | The iterations remaining in the loop.
+        $loop->count	       | The total number of items in the array being iterated.
+        $loop->first	       | Whether this is the first iteration through the loop.
+        $loop->last            | Whether this is the last iteration through the loop.
+        $loop->even            | Whether this is an even iteration through the loop.
+        $loop->odd	           | Whether this is an odd iteration through the loop.
+        $loop->depth	       | The nesting level of the current loop.
+        $loop->parent          | When in a nested loop, the parent's loop variable.
+
+        // you can use: @continue, @break.
+        // also u can write the condition in the continue() itself:  @continue($user->type == 1)
+        // also u can write the condition in the break() itself:  @break($user->number == 5
+
+
+-----------------------------------------------------------------------------------------------------
+Html Attributes in Blade: 
+
+    Extending a master section in other one: 
+        To extend a section: 
+            @extends('website.layout')
+
+        Open Slot in the layout: 
+            @yield('content')
+
+        And then, write the content that will be added to this slot: 
+            @section('title')
+                Home Page
+            @endsection
+
+
+    Including SubView: [to acheive SOC]
+            seperate each SubView in a new file,
+            then u can use it at any other place, just include it...
+
+        @include('website.layout')
+        @include('website.layout', ['status' => 'complete'])
+        @includeIf('view.name', ['status' => 'complete'])
+        @includeWhen($boolean, 'view.name', ['status' => 'complete'])
+        @includeUnless($boolean, 'view.name', ['status' => 'complete'])
+        @includeFirst(['custom.admin', 'admin'], ['status' => 'complete'])
+
+
+    Class in css: 
+        <span @class([
+            'p-4',
+            'font-bold' => $isActive,
+            'text-gray-500' => ! $isActive,
+            'bg-red' => $hasError,
+        ])></span>
+
+    Style in css: 
+        <span @style([
+            'background-color: red',
+            'font-weight: bold' => $isActive,
+        ])></span>
+
+
+-----------------------------------------------------------------------------------------------------
+Php in Blade: 
+    PHP Code: 
+        @php
+            $isActive = false;
+            $hasError = true;
+            -u can declare variables/ functions/ write conditions/ loops/ and so on, 
+            -and then u can use what u declare on the blade template(using {{}}).
+        @endphp
+
+    One Line PHP: 
+        @php($counter = 1)
+
+    Isset():
+        @isset($records)
+            // $records is defined and is not null...
+        @endisset
+        
+    Empty():    
+        @empty($records)
+            // $records is "empty"...
+        @endempty
+
+    Auth:
+        @auth
+            // The user is authenticated...
+        @endauth
+
+    Guest: 
+        @guest
+            // The user is not authenticated...
+        @endguest
+-----------------------------------------------------------------------------------------------------
+

@@ -1,0 +1,68 @@
+Controller is the link between all laravel components, 
+    it request the user requests and act with it, then he respond with them, 
+    it deals with the DB, either using ORM, or using DB query builder.
+    it can respond with returning data to user, returned data can be: 
+    1- Html (for browsers) 2- json format (for mobiles) 3- XML.
+
+Each object in your project should have a specific controller, to Fetch it's data and deal with it's logic, 
+    [Categories, Products, Photos, Users, Orders, Cart, ...etc]
+
+Controllers Contains Logic and Calculations in the System,
+    -don't use Call Back Route except you need it.
+    -also don't write any Logic or Calculations in the view, for the next reasons: 
+        1- To reuse the view template without alot of modifications. 
+        2- To send data to the various views,
+            suppose u write some Calculations in the web view,
+            then the mobile app developer must write them in his application,
+            some problems can appear like: Different results between web and mobile.
+        
+        Write all logic and Calculations in an action in a controller and send it to all views, 
+        unless it was simple Calculations, like sum 2 numbers, let them do it.
+
+Each task has it's own Controller to perform it's actions, 
+    -Controller method will be performed when we call it's route, 
+    -it take the parameters using request() or $request.
+
+    -Controller fetch the data from DB using ORM or Qurey Builder
+    -and then pass it to the view using COMPACT().
+
+
+----------------------------------------------------------------------------------------------------------
+Artisan Commands: 
+    Controller Commands: 
+    php artisan make:controller UserController
+    php artisan make:controller Website/UserController
+    php artisan make:controller Dashboard/UserController
+        laravel will make the folder if it doesn't exist,
+        or it will put the controller in it if it is exist.
+
+    -----------------------------------------------------------------------------------------------
+    php artisan make:controller ProvisionServer --invokable [Single Action Controller]
+        invokable controller is a controller that has only one action,
+        so u don't need to write the method name when u call it.
+
+    -----------------------------------------------------------------------------------------------
+    php artisan make:controller PhotoController --resource
+        Laravel resource routing assigns the typical create, read, update, and delete ("CRUD") routes, 
+        the actions are: [index, creae, store, show, edit, update, destroy].
+        u can also make the resource routes: 
+        Route::resource('photos', PhotoController::class);
+
+    -----------------------------------------------------------------------------------------------
+    php artisan make:controller PhotoController --api
+    php artisan make:controller API/PhotoController --api
+        To quickly generate an API resource controller that does not include the create or edit methods
+        the actions are: [index, store, show, update, destroy], 
+        create and edit actions return the view and mobile app don't need them.
+
+    -----------------------------------------------------------------------------------------------
+    php artisan make:controller PhotoController --model=Photo --resource
+        If you are using route model binding
+        and would like the resource controller's methods to type-hint a model instance
+
+    -----------------------------------------------------------------------------------------------
+    php artisan make:controller PhotoController --model=Photo --resource --requests
+        You may provide the --requests option when generating a resource controller
+        to instruct Artisan to generate form request classes for the controller's storage and update methods
+        
+----------------------------------------------------------------------------------------------------------

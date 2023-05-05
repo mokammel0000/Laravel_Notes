@@ -1,0 +1,31 @@
+Selecting a User/ Users from users table
+
+Retrieving A List Of Column Values
+
+Aggergation Methods
+
+Exist And Doesn't_Exist
+
+Where
+
+OrWhere
+
+whereNot - JSON Where Clauses
+
+whereBetween - whereNotBetween - whereIn - whereNotIn
+
+whereNull / whereNotNull / orWhereNull / orWhereNotNull
+
+whereDate - whereMonth - whereDay - whereYear - whereTime 
+
+whereColumn
+
+Chunking Results
+
+Streaming Results Lazily 
+
+Raw Expressions: writing SQL code in query builder.
+
+Joins
+
+Unions

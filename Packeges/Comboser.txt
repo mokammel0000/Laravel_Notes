@@ -1,0 +1,6 @@
+Comboser is A Dependency Manager for PHP
+u can use it in 
+    -download packages and it's dependancies.
+    -upgrade/ downgrade packege if it needed.
+    -install the same versions of packages as it is in your team project, to avoid conflict.
+    -autoload the packages in your website.

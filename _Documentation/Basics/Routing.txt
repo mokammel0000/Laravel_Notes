@@ -1,0 +1,58 @@
+Named Routes:
+    If you have a frequently used route,
+    add a name to it so you can reference it using its name in the URL() instead of typing out
+    the full path every time.
+    
+    
+    Benefits of using Named Routes:
+        -You don't need to write out the full path each time.
+        -If you want to change the route name,
+        -you only need to do it once, and the change will be reflected on all pages that use this route.
+
+
+-------------------------------------------------------------------------------------------------------
+It's prefer to seperate each group of routes in a specefic folder, 
+    -to add a prefix to any group of them.
+    -to add a specefic middleware on any group of them.
+
+    To add a new Routes Folder, u must add it's name to App/Providers/RouteServiceProvider
+
+
+api.php :       Mobile routing(retreiving json files).
+channels.php:   realTime messeges.
+console.php:    if u want to create a program that work from console(like artisan).
+
+
+--------------------------------------------------------------------------------------------------------
+Route:resource('/categories', CategoryController::class);
+    // create 7 routes to going to the 7 actions.
+Route:apiResource('/categories', CategoryController::class);
+    // create 5 routes to going to the 5 actions.
+
+    In the resource controller: 
+    index: /get 
+    show: /get
+    
+    create: /get    [it's not found in the api controller]
+    store: /post
+
+    edit: /get      [it's not found in the api controller]
+    update: /put
+
+    destroy: /delete
+
+
+--------------------------------------------------------------------------------------------------------
+Artisan Commands: 
+    php artisan route:list
+    php artisan route:list --path=categories
+
+
+--------------------------------------------------------------------------------------------------------
+Note That: 
+    -Some project can contain 2 ROUTES with the same name, but with different methods(get/ post)
+    resource routes do that by default.
+    -You can give a name to the route, to facilitate calling him especially if it name was large,
+        Route::get('/', function () {
+            return view('dashboard.index');
+        })->name('admin.index');

@@ -1,0 +1,3 @@
+Making Some Jobs that work on the server without any effort from anyone, 
+eg. system check about all users subscribtion 
+and send messeges to users whose subscribtion which is about to expire

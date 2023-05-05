@@ -1,0 +1,25 @@
+returning all of the results in the model's table:
+    $flights = Flight::all();
+
+returning results in an oredered way:
+    $flights = Flight::where('active', 1)->orderBy('name')->take(10)->get();
+
+    $products = product::orderBy('views', 'desc')->get();      // get all products after ordering them
+    $products = product::orderBy('views', 'desc')->limit(10)->get();
+                                                                
+
+returning results under a specific condition:
+    $slides = Slide::where('active', 1)->get();
+    $prodcuts = $products->where(function($q) use($keyword){
+                    // THIS IS A COMPOUND WHERE, ONE WHERE CONTAINS MULTIPLE CASES
+                    return $q->where('name', 'LIKE', "%$keyword%")
+                                ->orWhere('description', 'LIKE', "%$keyword%")
+                                ->orWhere('sku', '=', "$keyword")
+                                ->orWhere('price', '=', "$keyword");
+                });
+
+Refreshing Models
+Collections
+Chunking Results
+Chunking Using Lazy Collections
+Cursors

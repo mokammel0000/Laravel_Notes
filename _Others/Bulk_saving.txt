@@ -1,0 +1,22 @@
+Traditional Inserting/ Updating in Laravel: 
+    creating object from the Model, and adding data to it [Field by Field], 
+    and then save() the new model.
+
+
+---------------------------------------------------------------------------------------------------
+Bulk Insert/ Bulk Save/ Mass Assignment: 
+    passing an associative array to the model, and it will be saved automatically.
+    but note that: input fields thats come frmo html, must be similar to table fields, 
+        to enable laravel to put each input in it's right column.
+    This way is easier than the Traditional way, but there are a big problem in it: 
+        [it is not secure....]
+        because of it taking inputs entered from the user,
+        and entering it in your DB directly without checking these data....
+
+        so, laravel can't admit u use this way, unless u forced him to make it available for u, 
+        to do that write a $fillable array in the model that u want to Insert inputs on it,
+        but take care of that: 
+            -nullable fields can be written or not, 
+            but the notnull fields must be written in the array.
+
+    you can pass $request->all() or make your own array as $inputs to pass it to method(create() or update()).

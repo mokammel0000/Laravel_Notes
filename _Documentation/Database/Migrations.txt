@@ -1,0 +1,39 @@
+DDL for the DB in Laravel.
+------------------------------------------------------------------------------------------------------------
+Artisan Commands:
+    php artisan make:migration create_flights_table       --create=Flights
+    php artisan make:migration add_photo_field_to_flights --table=Flights
+
+    php artisan migrate[perform the code that's written in the UP() function.]
+
+
+    php artisan migrate:status          Show the status of each migration
+    php artisan migrate:install         Create the migration repository
+
+
+    php artisan migrate:refresh         Reset and re-run all migrations
+    php artisan migrate:fresh           Drop all tables and re-run all migrations
+    php artisan migrate:fresh --seed 
+    php artisan migrate:fresh --seed --seeder=FlightSeeder
+            // Drop all tables and re-run all of your migrations.
+            This command is useful for completely re-building your database.
+            The --seeder option may be used to specify a specific seeder to run
+
+
+    php artisan migrate:rollback        Rollback the last database migration
+        [perform the code that's written in the DOWN() function.]
+    php artisan migrate:reset           Rollback all database migrations
+    php artisan migrate:rollback 
+    php artisan migrate:rollback  --step=
+    php artisan migrate:rollback  --batch=
+
+
+------------------------------------------------------------------------------------------------------------
+Note that: 
+-in the team project, don't modify on a migration is sended to your team, 
+they migrate it, 
+so, u should make a new one, even if it will add just one column.
+
+-Laravel has a built-in table that's called 'migrations': 
+it store all the migration-files that's been migrated to ignore them when migrate a new migrations.
+        

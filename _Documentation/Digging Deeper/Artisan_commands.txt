@@ -1,0 +1,11 @@
+Use it to facilitate some jobs, such as making the template of a specific class, 
+then go to the class to write the whole code in it, then you can:
+    -use the class: eg. Factory class.
+    -call it in other classes: eg. Model class.
+    -perform the class: eg. Migration class or Seeding Class.
+
+
+Note That: 
+    -u can make your own artisan commands.
+
+
