@@ -1,7 +1,0 @@
-SPA is stands for: Single Page Application, 
-    it depends on AJAX, 
-    it has an amazing features, 
-
-    it devide the web Application to [COMPONENTS], 
-        each componenet has it's own code(html - css - javascript), 
-        that's facilitate move it to other website if u need it.
