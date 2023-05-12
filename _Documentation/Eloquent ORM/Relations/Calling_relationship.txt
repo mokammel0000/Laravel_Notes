@@ -1,7 +1,9 @@
-take care: don't call a relationship unless u need it, 
-    in some cases u will need ONLY the model, and don't need any one of it's relations, 
-    so don't call the relation unless u need to call it's propeties.
+Take care: don't call a relationship unless u need it, 
+    In some cases u will need ONLY the model, and there is no need to any one of it's relations, 
+    So don't call the relation unless u need to call it's propeties.
 
+
+------------------------------------------------------------------------------------------------
 Calling the relationship in the controller: 
     WITH(): 
         calling the relationship when u define the Model itself, 
@@ -22,13 +24,15 @@ Calling the relationship in the controller:
             $orders->load('products');
         
 
-Calling the relationship as a ATTRIBUTE: 
+------------------------------------------------------------------------------------------------
+Calling the relationship as a [ATTRIBUTE]: 
     write the relation withoute ()
     example: 
         $product->category;
 
 
-Calling the relationship as a METHOD: 
+------------------------------------------------------------------------------------------------
+Calling the relationship as a [METHOD]: 
     write the relation with ()
     examples:
         $product->category();

@@ -1,6 +1,6 @@
 ONE TO Many relationship    1 : M + 1 : 1   
     [parent-child relation]
-    -parent has any number of children, while child has only one parent.
+    [parent has any number of children, while child has only one parent]
     
     -In the DB scheme:
         the parent has no need to store id of his children,
@@ -9,9 +9,10 @@ ONE TO Many relationship    1 : M + 1 : 1
                         because the parent can have more than one child).
         Just take the id from the parent record and put it in the child record.
              
+
     -Methods in the Model:
-        The parent hasmany() childs, 
-        The child belongsto() ONE parent.
+        The parent [hasmany()] childs, 
+        The child [belongsto()] ONE parent.
                     // don't define the relation in the 2 Models until u need it,
 
     -eg. 
