@@ -6,18 +6,31 @@ PHP Internal Server [built-in web server]:
     it's domain is: localhost:8000 = 127.0.0.1:8000, 
     note that: it can't run mysql queries, so u have to run Mysql on xampp.
     it's a bit complicated to use it using native php,
-    It's prefer to use it by laravel(just one command: php artisan serve).
+    It's prefer to use it by laravel (just one command: php artisan serve).
 
 
 -----------------------------------------------------------------------------------------------------------------------
+Virtual Box:
+    Is an Virtual machine that u can instal Virtual OS using it, 
+    it's from Oracle, 
+    Vmware is better than it, but Virtual Box is Free.
+
 Vmware:
     Is an Virtual machine that u can instal Virtual OS using it. 
 
-Virtual Box:
-    Is an Virtual machine that u can instal Virtual OS using it.
+Parallels
+    Is an Virtual machine that u can instal Virtual OS using it. 
+    To use the Parallels provider, you will need to install Parallels Vagrant plug-in. It is free of charge,
+        (it's a plug-in to link Parallels with Vagrant).
+
+
 
 Vagrant: (use it)
-    Is an Virtual machine that u can instal Virtual OS using it.
+    Vagrant is an open-source software tool used for creating and managing virtual development environments,
+    It provides a simple and streamlined way to set up and configure virtual machines (VMs) for development purposes.
+    It works with popular virtualization platforms such as VirtualBox, VMware, and Hyper-V.
+
+    
     Vagrant is a tool for building and managing virtual machine environments in a single workflow.
         -With an easy-to-use workflow and focus on automation,
         -Vagrant lowers development environment setup time,
@@ -27,7 +40,7 @@ Vagrant: (use it)
 -----------------------------------------------------------------------------------------------------------------------
 but after u installing a virtual OS using the virtual machine program,
     u have to install the whole environment to run laravel code, 
-    u need to install -php -mysql -apache, or any other localhost server.
+    u need to install -php -mysql -apache (or any other localhost server).
 
 Then u should to use [HOMESTEAD]:
     It's a laravel package that install all u need to run laravel project.
@@ -36,7 +49,7 @@ Then u should to use [HOMESTEAD]:
     then u can use your main OS, to deal with the website as a cleint, this is what happenning in the real applications.
     
 
-[I think that: when u installing Homestead, it install laravel environment in both the maing and virtual OS], 
+[I think that: when u installing Homestead, it install laravel environment in both the main and virtual OS], 
 
 
 -----------------------------------------------------------------------------------------------------------------------
