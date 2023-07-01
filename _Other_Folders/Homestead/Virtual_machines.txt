@@ -13,7 +13,7 @@ PHP Internal Server [built-in web server]:
 Virtual Box:
     Is an Virtual machine that u can instal Virtual OS using it, 
     it's from Oracle, 
-    Vmware is better than it, but Virtual Box is Free.
+    Vmware is better than it, but Virtual Box is [Free].
 
 Vmware:
     Is an Virtual machine that u can instal Virtual OS using it. 
