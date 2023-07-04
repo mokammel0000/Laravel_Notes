@@ -1,0 +1,8 @@
+1- using laravel Composer: 
+    composer create project laravel/laravel _projectName_
+
+
+2- using laravel installer: 
+    complser global require laravel/installer
+    complser global update laravel/installer
+    laravel new _projectName_
