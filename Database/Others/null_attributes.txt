@@ -1,5 +1,7 @@
 When can make the attribute nullable: 
     -if the coloumn will be compared with any other field, don't make it nullable.
+    -if we will make any operation with it's column, don't make it nullable.
+    -if we will compute the sum or the average of it's column, don't make it nullable.
     -if it will be called in any other place in the view, don't make it nullable.
     
     -if the attribute isn't neccesary to use,

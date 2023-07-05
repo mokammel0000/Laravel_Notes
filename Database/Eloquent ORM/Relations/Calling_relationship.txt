@@ -24,18 +24,3 @@ Calling the relationship in the controller:
             $orders->load('products');
         
 
-------------------------------------------------------------------------------------------------
-Calling the relationship as a [ATTRIBUTE]: 
-    write the relation withoute ()
-    example: 
-        $product->category;
-
-
-------------------------------------------------------------------------------------------------
-Calling the relationship as a [METHOD]: 
-    write the relation with ()
-    examples:
-        $product->category();
-        $newUser = User::create($inputs); 
-        $newUser = cart()->create(); 
-                    we call the cart relation from the user Model as a method
